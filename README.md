@@ -27,15 +27,15 @@ cd libpng-1.6.34
 rm -rf build
 mkdir build
 cd build
-cmake .. -DZLIB_LIBRARY=/home/luba/zlib-1.2.8/build/libz.a -DZLIB_INCLUDE_DIR=/home/luba/zlib-1.2.8/build -DPNG_DEBUG=1 
+cmake .. -DZLIB_LIBRARY=/home/luba/zlib-1.2.8/build/libz.a -DZLIB_INCLUDE_DIR=/home/luba/zlib-1.2.8/build 
 ```
 for debug:
 ```
-cmake .. -DCMAKE_BUILD_TYPE=DEBUG
+cmake .. -DCMAKE_BUILD_TYPE=DEBUG -DPNG_DEBUG=1 
 ```
 for release:
 ```
-cmake .. -DCMAKE_BUILD_TYPE=RELEASE
+cmake .. -DCMAKE_BUILD_TYPE=RELEASE -DPNG_DEBUG=0
 make 
 ```
 ## Build for AM5728
