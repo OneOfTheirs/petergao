@@ -12,7 +12,7 @@ If you prefer your own place, the following script need to be modified according
 Please copy both of libpng-1.6.34 and zlib-1.2.8 to a local filesystem 
 (not remote access to Windows, because you won't be able to create symlink in windows)
 
-Terminal A:
+Terminal A: (build libz)
 ```
 cd zlib-1.2.8
 rm -rf build
@@ -21,7 +21,7 @@ cd build
 cmake ..
 make
 ```
-Terminal B:
+Terminal B: (build libpng)
 ```
 cd libpng-1.6.34
 rm -rf build
@@ -39,7 +39,7 @@ cmake .. -DCMAKE_BUILD_TYPE=RELEASE -DPNG_DEBUG=0
 make 
 ```
 ## Build for AM5728
-Terminal A:
+Terminal A: (build libz)
 ```
 source /home/luba/ti-processor-sdk-linux-am57xx-evm-04.03.00.05/linux-devkit/environment-step
 cd zlib-1.2.8
@@ -49,7 +49,7 @@ cd build
 cmake ..
 make
 ```
-Terminal B:
+Terminal B: (build libz)
 ```
 source /home/luba/ti-processor-sdk-linux-am57xx-evm-04.03.00.05/linux-devkit/environment-step
 cd libpng-1.6.34
