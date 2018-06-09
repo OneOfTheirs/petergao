@@ -1,6 +1,6 @@
 Please store third party libraries source code here. 
 
-# To rebuild libpng
+# How to build libpng libraries
 To build libpng (and zlib) for PC linux and AM5728, please ensure they are placed at 
 /home/luba/libpng-1.6.34
 /home/luba/zlib-1.2.8
@@ -8,7 +8,7 @@ and TI-SDK at
 /home/luba/ti-processor-sdk-linux-am57xx-evm-04.03.00.05
 If you prefer your own place, the following script need to be modified accordingly.
 
-## For linux
+## Build for ubuntu linux
 Please copy both of libpng-1.6.34 and zlib-1.2.8 to a local filesystem 
 (not remote access to Windows, because you won't be able to create symlink in windows)
 
@@ -38,7 +38,7 @@ for release:
 cmake .. -DCMAKE_BUILD_TYPE=RELEASE
 make 
 ```
-## For AM5728
+## Build for AM5728
 Terminal A:
 ```
 source /home/luba/ti-processor-sdk-linux-am57xx-evm-04.03.00.05/linux-devkit/environment-step
@@ -51,6 +51,7 @@ make
 ```
 Terminal B:
 ```
+source /home/luba/ti-processor-sdk-linux-am57xx-evm-04.03.00.05/linux-devkit/environment-step
 cd libpng-1.6.34
 rm -rf build
 mkdir build
